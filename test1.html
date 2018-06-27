@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>test1</title>
+		<style type="text/css">
+			#p1{
+				transition: color 2s;
+				-moz-transition: color 2s;	/* Firefox 4 */
+                -webkit-transition: color 2s;	/* Safari 和 Chrome */
+                -o-transition: color 2s;	/* Opera */
+				position: absolute;
+                left:300px ;
+                top: 300px;
+                font-size: 30px;
+			}
+			#btn1{
+				position: absolute;
+	            left:300px ;
+                top: 420px;
+                width: 120px;
+                height: 50px;
+                background-color: white;
+                border-radius: 5px;	
+                font-size: 20px;		
+			}
+			#div1{
+				position: absolute;
+				top:380px;
+				left: 300px;
+				width: 120px;
+				height: 0px;
+			}
+			#div2{
+				transition: width 2s;
+				-moz-transition: width 2s;	/* Firefox 4 */
+                -webkit-transition: width 2s;	/* Safari 和 Chrome */
+                -o-transition: width 2s;	/* Opera */	
+                text-align: center;
+				background-color: blue;
+				width: 0px;
+				height: 5px;
+				margin: auto;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p id="p1">前端学院</p>
+		<div id="div1">
+			<div id="div2">
+				
+			</div>
+		</div>
+		<button id="btn1">切换样式</button>
+		<script type="text/javascript">
+			var n=2;
+			document.getElementById("btn1").onclick=function(){
+				n++;
+				if (n%2==1) {
+				document.getElementById("div2").style.width="120px";
+				document.getElementById("p1").style.color="#0000FF";
+				} else{
+				document.getElementById("div2").style.width="0px";
+				document.getElementById("p1").style.color="black";	
+				}
+
+			}
+		</script>
+	</body>
+</html>
